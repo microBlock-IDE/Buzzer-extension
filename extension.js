@@ -8,7 +8,7 @@
                 <block type="tone1">
                     <value name="pin">
                         <shadow type="math_number">
-                            <field name="NUM">12</field>
+                            <field name="NUM">4</field>
                         </shadow>
                     </value>
                     <value name="freq">
@@ -29,7 +29,7 @@
                 <block type="tone2">
                     <value name="pin">
                         <shadow type="math_number">
-                            <field name="NUM">12</field>
+                            <field name="NUM">4</field>
                         </shadow>
                     </value>
                     <value name="freq">
@@ -45,7 +45,7 @@
                 <block type="no_tone">
                     <value name="pin">
                         <shadow type="math_number">
-                            <field name="NUM">12</field>
+                            <field name="NUM">4</field>
                         </shadow>
                     </value>
                 </block>
