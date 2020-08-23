@@ -2,6 +2,7 @@
     name: "Buzzer", // Category Name
     description: "Make buzzer beep sound",
     author: "microBlock",
+    category: "Device Control",
     version: "1.0.0",
     icon: "/static/icon.png", // Category icon
     color: "#F39C12", // Category color (recommend some blocks color)
