@@ -1,13 +1,18 @@
 function buzzerWriteFunction() {
+  let board = boards.find(board => board.id === boardId);
+
+  const _duty = board?.chip === "RP2" ? "duty_u16" : "duty";
+  const _max_duty = board?.chip === "RP2" ? "65535" : "1023";
+
   return Blockly.Python.provideFunction_(
     'buzzerWrite',
     ['def ' + Blockly.Python.FUNCTION_NAME_PLACEHOLDER_ + '(pin, freq=1000, duty=50, stop=0):',
     '  pwm = PWM(Pin(pin))',
     '  pwm.freq(freq)',
-    '  pwm.duty_u16(int(duty / 100 * 65535))',
+    '  pwm.' + _duty + '(int(duty / 100 * ' + _max_duty + '))',
     '  if stop > 0:',
     '    sleep(stop)',
-    '    pwm.duty_u16(0)'
+    '    pwm.' + _duty + '(0)'
   ]);
 }
 
