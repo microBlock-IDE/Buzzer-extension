@@ -55,5 +55,7 @@
                 </block>
             `
         }
-    ]
+    ], 
+    supportArduinoPlatform: true,
+    depends: [ ] // Arduino library
 });

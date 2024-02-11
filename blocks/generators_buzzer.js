@@ -46,3 +46,29 @@ Blockly.Python['no_tone'] = function(block) {
   var code = `${buzzerWriteFunction()}(${value_pin}, duty=0)\n`;
   return code;
 };
+
+
+Blockly.JavaScript['tone1'] = function(block) {
+  var value_pin = Blockly.JavaScript.valueToCode(block, 'pin', Blockly.JavaScript.ORDER_ATOMIC);
+  var value_freq = Blockly.JavaScript.valueToCode(block, 'freq', Blockly.JavaScript.ORDER_ATOMIC);
+  var value_time = Blockly.JavaScript.valueToCode(block, 'time', Blockly.JavaScript.ORDER_ATOMIC);
+
+  var code = `tone(${value_pin}, ${value_freq}, ${value_time} * 1000);\n`;
+  return code;
+};
+
+Blockly.JavaScript['tone2'] = function(block) {
+  var value_pin = Blockly.JavaScript.valueToCode(block, 'pin', Blockly.JavaScript.ORDER_ATOMIC);
+  var value_freq = Blockly.JavaScript.valueToCode(block, 'freq', Blockly.JavaScript.ORDER_ATOMIC);
+
+  var code = `tone(${value_pin}, ${value_freq});\n`;
+  return code;
+};
+
+Blockly.JavaScript['no_tone'] = function(block) {
+  var value_pin = Blockly.JavaScript.valueToCode(block, 'pin', Blockly.JavaScript.ORDER_ATOMIC);
+
+  var code = `noTone(${value_pin});\n`;
+  return code;
+};
+
