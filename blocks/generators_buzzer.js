@@ -1,8 +1,8 @@
 function buzzerWriteFunction() {
   let board = boards.find(board => board.id === boardId);
 
-  const _duty = board?.chip === "RP2" ? "duty_u16" : "duty";
-  const _max_duty = board?.chip === "RP2" ? "65535" : "1023";
+  const _duty = (board?.chip === "RP2" || board?.chip === "RP2-WiFi") ? "duty_u16" : "duty"; // Add RP2-WiFi Chip
+  const _max_duty = (board?.chip === "RP2" || board?.chip === "RP2-WiFi") ? "65535" : "1023"; // Add RP2-WiFi Chip
 
   return Blockly.Python.provideFunction_(
     'buzzerWrite',
